@@ -51,10 +51,17 @@
             this.도움말ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.이프로그램은ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.건의사항ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tlsMenu = new System.Windows.Forms.ToolStrip();
+            this.tsbtnFont = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnColor = new System.Windows.Forms.ToolStripButton();
+            this.fontDlg = new System.Windows.Forms.FontDialog();
+            this.colorDlg = new System.Windows.Forms.ColorDialog();
+            this.rtbText = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.cmsMenu.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.tlsMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -238,11 +245,53 @@
             this.건의사항ToolStripMenuItem.Text = "건의사항";
             this.건의사항ToolStripMenuItem.Click += new System.EventHandler(this.건의사항ToolStripMenuItem_Click);
             // 
+            // tlsMenu
+            // 
+            this.tlsMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbtnFont,
+            this.tsbtnColor});
+            this.tlsMenu.Location = new System.Drawing.Point(0, 24);
+            this.tlsMenu.Name = "tlsMenu";
+            this.tlsMenu.Size = new System.Drawing.Size(742, 25);
+            this.tlsMenu.TabIndex = 7;
+            this.tlsMenu.Text = "toolStrip1";
+            // 
+            // tsbtnFont
+            // 
+            this.tsbtnFont.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnFont.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnFont.Image")));
+            this.tsbtnFont.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnFont.Name = "tsbtnFont";
+            this.tsbtnFont.Size = new System.Drawing.Size(23, 22);
+            this.tsbtnFont.Text = "toolStripButton1";
+            this.tsbtnFont.Click += new System.EventHandler(this.TsbtnFont_Click);
+            // 
+            // tsbtnColor
+            // 
+            this.tsbtnColor.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnColor.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnColor.Image")));
+            this.tsbtnColor.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnColor.Name = "tsbtnColor";
+            this.tsbtnColor.Size = new System.Drawing.Size(23, 22);
+            this.tsbtnColor.Text = "toolStripButton2";
+            this.tsbtnColor.Click += new System.EventHandler(this.TsbtnColor_Click);
+            // 
+            // rtbText
+            // 
+            this.rtbText.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtbText.Location = new System.Drawing.Point(0, 49);
+            this.rtbText.Name = "rtbText";
+            this.rtbText.Size = new System.Drawing.Size(742, 252);
+            this.rtbText.TabIndex = 8;
+            this.rtbText.Text = resources.GetString("rtbText.Text");
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(742, 323);
+            this.Controls.Add(this.rtbText);
+            this.Controls.Add(this.tlsMenu);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btnAdd);
@@ -265,6 +314,8 @@
             this.statusStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.tlsMenu.ResumeLayout(false);
+            this.tlsMenu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,6 +344,12 @@
         private System.Windows.Forms.ToolStripMenuItem 이프로그램은ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 건의사항ToolStripMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel statusMessage;
+        private System.Windows.Forms.ToolStrip tlsMenu;
+        private System.Windows.Forms.ToolStripButton tsbtnFont;
+        private System.Windows.Forms.ToolStripButton tsbtnColor;
+        private System.Windows.Forms.FontDialog fontDlg;
+        private System.Windows.Forms.ColorDialog colorDlg;
+        private System.Windows.Forms.RichTextBox rtbText;
     }
 }
 
